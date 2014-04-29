@@ -1,0 +1,16 @@
+D:\Download\google-api-dotnet-client-1.2.4737-beta.source\Src\GoogleApis\bin\Debug\Google.Apis.dll
+D:\Download\google-api-dotnet-client-1.2.4737-beta.source\Src\GoogleApis\bin\Debug\Google.Apis.pdb
+D:\Download\google-api-dotnet-client-1.2.4737-beta.source\Src\GoogleApis\bin\Debug\GoogleApis.xml
+D:\Download\google-api-dotnet-client-1.2.4737-beta.source\Src\GoogleApis\bin\Debug\log4net.dll
+D:\Download\google-api-dotnet-client-1.2.4737-beta.source\Src\GoogleApis\bin\Debug\Newtonsoft.Json.Net35.dll
+D:\Download\google-api-dotnet-client-1.2.4737-beta.source\Src\GoogleApis\bin\Debug\Newtonsoft.Json.Net35.xml
+D:\Download\google-api-dotnet-client-1.2.4737-beta.source\Src\GoogleApis\obj\Debug\GoogleApis.csprojResolveAssemblyReference.cache
+D:\Download\google-api-dotnet-client-1.2.4737-beta.source\Src\GoogleApis\obj\Debug\Google.Apis.dll
+D:\Download\google-api-dotnet-client-1.2.4737-beta.source\Src\GoogleApis\obj\Debug\Google.Apis.pdb
+D:\Develop\Projects\GDrive\GoogleApis\obj\Debug\Google.Apis.dll
+D:\Develop\Projects\GDrive\GoogleApis\obj\Debug\Google.Apis.pdb
+D:\Develop\Projects\GDrive\GoogleApis\bin\Debug\Google.Apis.dll
+D:\Develop\Projects\GDrive\GoogleApis\bin\Debug\Google.Apis.pdb
+D:\Develop\Projects\GDrive\GoogleApis\bin\Debug\GoogleApis.xml
+D:\Develop\Projects\GDrive\GoogleApis\bin\Debug\Newtonsoft.Json.Net35.xml
+D:\Develop\Projects\GDrive\GoogleApis\obj\Debug\GoogleApis.csprojResolveAssemblyReference.cache
