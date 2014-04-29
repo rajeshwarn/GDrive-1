@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9D13C369-79B0-4A00-90E9-4D4EC7EC0F93}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GDrive</RootNamespace>
+    <AssemblyName>GDrive</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetOpenAuth, Version=4.0.0.11165, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ThirdParty\DotNetOpenAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ThirdParty\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq, Version=4.0.10827.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ThirdParty\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Net35, Version=4.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ThirdParty\Newtonsoft.Json.Net35.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.5.10.11092, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ThirdParty\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Auth\AppData.cs" />
+    <Compile Include="Classes\Auth\AuthorizationMgr.cs" />
+    <Compile Include="Classes\Auth\ClientCredentials.cs" />
+    <Compile Include="Classes\Auth\GAuth.cs" />
+    <Compile Include="Classes\Auth\INativeAuthorizationFlow.cs" />
+    <Compile Include="Classes\Auth\LoopbackServerAuthorizationFlow.cs" />
+    <Compile Include="Classes\Auth\Util.cs" />
+    <Compile Include="Classes\Auth\WindowTitleNativeAuthorizationFlow.cs" />
+    <Compile Include="Classes\Forms\OAuth2AuthorizationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\Forms\OAuth2AuthorizationDialog.Designer.cs" />
+    <Compile Include="Classes\Forms\OAuth2CodePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Classes\Forms\OAuth2CodePanel.Designer.cs" />
+    <Compile Include="Classes\Forms\OAuth2IntroPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Classes\Forms\OAuth2IntroPanel.Designer.cs" />
+    <Compile Include="Classes\Google.Apis.Drive.v2.cs" />
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Classes\Forms\OAuth2AuthorizationDialog.resx" />
+    <EmbeddedResource Include="Classes\Forms\OAuth2CodePanel.resx" />
+    <EmbeddedResource Include="Classes\Forms\OAuth2IntroPanel.resx" />
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="ThirdParty\DotNetOpenAuth.LICENSE" />
+    <None Include="ThirdParty\log4net.LICENSE" />
+    <None Include="ThirdParty\Moq.LICENSE" />
+    <None Include="ThirdParty\Newtonsof.Json.LICENSE" />
+    <None Include="ThirdParty\nunit.framework.LICENSE" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GoogleApis.Authentication.OAuth2\GoogleApis.Authentication.OAuth2.csproj">
+      <Project>{76106493-68ef-4e44-af2e-971abf29b300}</Project>
+      <Name>GoogleApis.Authentication.OAuth2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GoogleApis\GoogleApis.csproj">
+      <Project>{cbb5e638-f8d5-48db-93be-5a7cdd7ed107}</Project>
+      <Name>GoogleApis</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Classes\Auth\search-48.gif" />
+    <Content Include="ThirdParty\DotNetOpenAuth.dll" />
+    <Content Include="ThirdParty\log4net.dll" />
+    <Content Include="ThirdParty\Moq.dll" />
+    <Content Include="ThirdParty\Newtonsoft.Json.Net35.dll" />
+    <Content Include="ThirdParty\Newtonsoft.Json.Net35.xml" />
+    <Content Include="ThirdParty\Newtonsoft.Json.Silverlight.dll" />
+    <Content Include="ThirdParty\nunit.framework.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
